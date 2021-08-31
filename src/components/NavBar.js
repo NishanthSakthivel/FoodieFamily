@@ -1,49 +1,72 @@
-import React from 'react';
-import Navbar from "react-bootstrap/Navbar";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
+import React from "react";
 import BrandImg from "../Assets/Brand.png";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
-    return (
-      <div>
-        <Navbar expand="lg justify-content-center">
-          <Container>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="m-auto">
-                <Nav.Link
-                  href="/FoodieFamily/home"
-                  style={{ fontSize: "1.3em" }}
-                >
-                  Home
-                </Nav.Link>
-                <Nav.Link
-                  href="/FoodieFamily/about"
-                  style={{ fontSize: "1.3em" }}
-                >
-                  About
-                </Nav.Link>
-                <Nav.Link
-                  href="/FoodieFamily/contact"
-                  style={{ fontSize: "1.3em" }}
-                >
-                  Contact
-                </Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-            <Navbar.Brand href="#home">
-              <img
-                className="text-alignt-start"
-                src={BrandImg}
-                alt="brand_img"
-                style={{ width: "80px", height: "80px" }}
-              />
-            </Navbar.Brand>
-          </Container>
-        </Navbar>
+  return (
+    <div>
+      <div className="container d-flex justify-content-center">
+        <nav class="navbar navbar-expand-lg text-align-center">
+          <div class="container-fluid textDecoration">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item mt-2">
+                  <Link
+                    to="/home"
+                    style={{ textDecoration: "none" }}
+                    class="nav-link p-3"
+                  >
+                    <h6 className="text-dark">Home</h6>
+                  </Link>
+                </li>
+
+                <li class="nav-item mt-2">
+                  <Link
+                    to="/about"
+                    style={{ textDecoration: "none" }}
+                    class="nav-link p-3"
+                  >
+                    <h6 className="text-dark">About</h6>
+                  </Link>
+                </li>
+
+                <li class="nav-item mt-2">
+                  <Link
+                    to="/contact"
+                    style={{ textDecoration: "none" }}
+                    class="nav-link p-3"
+                  >
+                    <h6 className="text-dark">Contact</h6>
+                  </Link>
+                </li>
+                <li>
+                  <Link class="navbar-brand" to="/">
+                    <img
+                      className="text-alignt-start"
+                      src={BrandImg}
+                      alt="brand_img"
+                      style={{ width: "80px", height: "80px" }}
+                    />
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
       </div>
-    );
+    </div>
+  );
 };
 
 export default NavBar;
