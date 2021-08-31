@@ -18,12 +18,10 @@ function App() {
           <div className="text-center">
             <NavBar />
           </div>
-          <div className="App">
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/home" component={Home} />
-              <Route path="/about" component={About} />
-            </Switch>
+          <div >
+            <Route exact path="/FoodieFamily" component={Home} />
+            <Route path="/home" component={Home} />
+            <Route path="/about" component={About} />
           </div>
           <Footer />
         </div>
