@@ -9,7 +9,7 @@ const NavBar = () => {
         <nav class="navbar navbar-expand-lg text-align-center">
           <div class="container-fluid textDecoration">
             <button
-              class="navbar-toggler"
+              class="navbar-toggler text-dark"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent"
