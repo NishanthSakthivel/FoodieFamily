@@ -1,15 +1,17 @@
 import React from "react";
 import BrandImg from "../Assets/Brand.png";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 const NavBar = () => {
   return (
     <div>
-      <div className="container d-flex justify-content-center">
+      <div className="container d-flex justify-content-center ">
         <nav class="navbar navbar-expand-lg text-align-center">
           <div class="container-fluid textDecoration">
             <button
-              class="navbar-toggler text-dark"
+              class="navbar-toggler navbar-toggler "
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent"
@@ -17,7 +19,11 @@ const NavBar = () => {
               aria-expanded="false"
               aria-label="Toggle navigation"
             >
-              <span class="navbar-toggler-icon"></span>
+              <span class="navbar-toggler-icon">
+                {" "}
+                {/* <FontAwesomeIcon icon="fa-solid fa-bars" /> */}
+                <i class="fas fa-bars"></i>
+              </span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">

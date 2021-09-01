@@ -9,6 +9,7 @@ import "./App.css";
 import Home from "./components/Home";
 import About from "./components/About";
 import NavBar from "./components/NavBar";
+import contact from "./components/contact";
 
 function App() {
   return (
@@ -18,10 +19,11 @@ function App() {
           <div className="text-center">
             <NavBar />
           </div>
-          <div >
+          <div>
             <Route exact path="/FoodieFamily" component={Home} />
             <Route path="/home" component={Home} />
             <Route path="/about" component={About} />
+            <Route path="/contact" component={contact} />
           </div>
           <Footer />
         </div>
